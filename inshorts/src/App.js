@@ -13,7 +13,7 @@ const [newResults, setnewResults] = useState()
 const [loadMore, setLoadMore] = useState(20)
 const newsApi=async()=>{
   try{
-  const news= await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=4378e13d41a548ccb4433715bbec27e0&pageSize=${loadMore}`);
+  const news= await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey={add your api key}&pageSize=${loadMore}`);
   setnewsArray(news.data.articles);
   setnewResults(news.data.totalResults);
   // console.log(newsArray);
